@@ -47,6 +47,7 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   margin: 0; /* Remove the margin in all browsers. */
+  background-color: var(--grey-200);
 }
 
 /*
