@@ -1,10 +1,13 @@
 .title {
   width: 7ch;
-  white-space: normal;
   word-break: break-word;
   color: var(--grey-600);
   letter-spacing: 12px;
   margin: 4rem auto;
   line-height: 1.4;
   font-weight: 600;
+}
+
+.container {
+  width: 100%;
 }
