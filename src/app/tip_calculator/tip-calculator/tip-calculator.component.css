@@ -1,6 +1,50 @@
-.calculator--container {
+.calculator {
   background-color: var(--white);
-  max-width: 920px;
+  max-width: 610px;
   padding: 24px;
   border-radius: 15px 15px 0 0;
+  margin: 0 auto;
+}
+
+.calculator__heading {
+  color: var(--grey-500);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.calculator__input {
+  border: none;
+  background-color: var(--grey-50);
+  color: var(--green-900);
+  text-align: end;
+  padding: 16px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.calculator__input--bill {
+  background-image: url(/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.calculator__input--people {
+  background-image: url(/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.calculator__tip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.calculator__tip__btn,
+.calculator__tip__input {
+  padding: 1rem;
+  border: none;
 }
