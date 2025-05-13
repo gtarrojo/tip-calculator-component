@@ -21,18 +21,22 @@
   width: 100%;
   margin: 0 auto;
   display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.calculator__input--bill,
+.calculator__input--people {
+  background-repeat: no-repeat;
+  background-position: 16px center;
 }
 
 .calculator__input--bill {
   background-image: url(/icon-dollar.svg);
-  background-repeat: no-repeat;
-  background-position: 16px center;
 }
 
 .calculator__input--people {
   background-image: url(/icon-person.svg);
-  background-repeat: no-repeat;
-  background-position: 16px center;
 }
 
 .calculator__tip {
@@ -47,4 +51,35 @@
 .calculator__tip__input {
   padding: 1rem;
   border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.calculator__tip__input {
+  background-color: var(--grey-50);
+  text-align: center;
+}
+
+.calculator__tip__btn {
+  background-color: var(--green-900);
+  color: white;
+
+  transition: transform 0.2s;
+}
+
+.calculator__tip__btn:hover,
+.calculator__tip__btn:focus {
+  background-color: var(--green-400);
+  color: var(--green-900);
+  transform: scale(98%);
+}
+
+/* calculator result  */
+
+.calculator__result {
+  background-color: var(--green-900);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-top: 2rem;
 }
