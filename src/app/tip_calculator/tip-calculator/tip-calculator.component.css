@@ -76,6 +76,10 @@
   transform: scale(98%);
 }
 
+.calculator__tip__btn--active {
+  background-color: var(--green-400);
+}
+
 /* calculator result  */
 
 .calculator__result {

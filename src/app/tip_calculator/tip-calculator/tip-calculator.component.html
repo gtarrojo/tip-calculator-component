@@ -6,20 +6,64 @@
         class="calculator__input calculator__input--bill"
         placeholder="00.0"
         type="number"
+        [(ngModel)]="bill"
+        name="bill"
+        step="0.01"
+        min="0"
+        (input)="formatBill()"
       />
     </div>
     <div>
       <h2 class="calculator__heading">Select Tip %</h2>
       <div class="calculator__tip">
-        <button class="calculator__tip__btn" type="button">5%</button>
-        <button class="calculator__tip__btn" type="button">10%</button>
-        <button class="calculator__tip__btn" type="button">15%</button>
-        <button class="calculator__tip__btn" type="button">25%</button>
-        <button class="calculator__tip__btn" type="button">50%</button>
+        <button
+          (click)="selectTip(5)"
+          class="calculator__tip__btn"
+          type="button"
+          [class.calculator__tip__btn--active]="selectedTip === 5"
+        >
+          5%
+        </button>
+        <button
+          (click)="selectTip(10)"
+          class="calculator__tip__btn"
+          type="button"
+          [class.calculator__tip__btn--active]="selectedTip === 10"
+        >
+          10%
+        </button>
+        <button
+          (click)="selectTip(15)"
+          class="calculator__tip__btn"
+          type="button"
+          [class.calculator__tip__btn--active]="selectedTip === 15"
+        >
+          15%
+        </button>
+        <button
+          (click)="selectTip(25)"
+          class="calculator__tip__btn"
+          type="button"
+          [class.calculator__tip__btn--active]="selectedTip === 25"
+        >
+          25%
+        </button>
+        <button
+          (click)="selectTip(50)"
+          class="calculator__tip__btn"
+          type="button"
+          [class.calculator__tip__btn--active]="selectedTip === 50"
+        >
+          50%
+        </button>
         <input
+          (input)="onCustomTipChange()"
           class="calculator__tip__input"
           type="number"
           placeholder="Custom"
+          [(ngModel)]="customTip"
+          name="customTip"
+          min="0"
         />
       </div>
     </div>
@@ -29,6 +73,10 @@
         class="calculator__input calculator__input--people"
         type="number"
         placeholder="0"
+        [(ngModel)]="people"
+        name="people"
+        min="0"
+        (input)="validatePeople()"
       />
     </div>
   </div>
@@ -38,15 +86,21 @@
         <p class="calculator__result__text--line">Tip Amount</p>
         <p class="calculator__result__text--person">/ person</p>
       </div>
-      <p class="calculator__result__amount">$0.00</p>
+      <p class="calculator__result__amount">
+        ${{ tipAmountPerPerson | number : "1.2-2" }}
+      </p>
     </div>
     <div class="calculator__result__row">
       <div class="calculator__result__text">
         <p class="calculator__result__text--line">Total</p>
         <p class="calculator__result__text--person">/ person</p>
       </div>
-      <p class="calculator__result__amount">$0.00</p>
+      <p class="calculator__result__amount">
+        ${{ totalPerPerson | number : "1.2-2" }}
+      </p>
     </div>
-    <button class="calculator__result__btn" type="button">RESET</button>
+    <button (click)="reset()" class="calculator__result__btn" type="button">
+      RESET
+    </button>
   </div>
 </form>
