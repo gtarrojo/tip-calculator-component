@@ -1,8 +1,8 @@
 .calculator {
   background-color: var(--white);
-  max-width: 610px;
+  max-width: 617px;
   padding: 24px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px;
   margin: 0 auto;
 }
 
@@ -10,6 +10,7 @@
   color: var(--grey-500);
   font-weight: 600;
   font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .calculator__input {
@@ -40,7 +41,7 @@
 }
 
 .calculator__tip {
-  width: 100%;
+  width: 98%;
   display: grid;
   grid-template-columns: repeat(2, minmax(50%, 1fr));
   grid-template-rows: repeat(3, 1fr);
@@ -49,7 +50,7 @@
 
 .calculator__tip__btn,
 .calculator__tip__input {
-  padding: 1rem;
+  padding: 0.8rem;
   border: none;
   border-radius: 8px;
   font-size: 1.3rem;
@@ -82,4 +83,89 @@
   padding: 1.5rem;
   border-radius: 15px;
   margin-top: 2rem;
+}
+
+.calculator__result__row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.25;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.calculator__result__text--line {
+  color: var(--white);
+}
+
+.calculator__result__text--person {
+  color: var(--grey-400);
+  font-size: 0.9rem;
+}
+
+.calculator__result__amount {
+  color: var(--green-400);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.calculator__result__btn {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: var(--green-400);
+  color: var(--green-900);
+  width: 98%;
+}
+
+.calculator__result__btn:hover,
+.calculator__result__btn:focus {
+  background-color: var(--green-200);
+}
+
+@media (min-width: 500px) {
+  .calculator {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 798px) {
+  .calculator__tip {
+    grid-template-columns: repeat(3, minmax(33%, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .calculator {
+    display: flex;
+    max-width: 920px;
+    gap: 2rem;
+    padding: 40px;
+  }
+
+  .calculator__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+  }
+
+  .calculator__result {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 3rem 2rem;
+  }
+
+  .calculator__result__btn {
+    margin-top: auto;
+  }
 }

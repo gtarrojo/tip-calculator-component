@@ -1,50 +1,52 @@
 <form class="calculator">
-  <div>
-    <h2 class="calculator__heading">Bill</h2>
-    <input
-      class="calculator__input calculator__input--bill"
-      placeholder="00.0"
-      type="number"
-    />
-  </div>
-  <div>
-    <h2 class="calculator__heading">Select Tip %</h2>
-    <div class="calculator__tip">
-      <button class="calculator__tip__btn" type="button">5%</button>
-      <button class="calculator__tip__btn" type="button">10%</button>
-      <button class="calculator__tip__btn" type="button">15%</button>
-      <button class="calculator__tip__btn" type="button">25%</button>
-      <button class="calculator__tip__btn" type="button">50%</button>
+  <div class="calculator__container">
+    <div>
+      <h2 class="calculator__heading">Bill</h2>
       <input
-        class="calculator__tip__input"
+        class="calculator__input calculator__input--bill"
+        placeholder="00.0"
         type="number"
-        placeholder="Custom"
+      />
+    </div>
+    <div>
+      <h2 class="calculator__heading">Select Tip %</h2>
+      <div class="calculator__tip">
+        <button class="calculator__tip__btn" type="button">5%</button>
+        <button class="calculator__tip__btn" type="button">10%</button>
+        <button class="calculator__tip__btn" type="button">15%</button>
+        <button class="calculator__tip__btn" type="button">25%</button>
+        <button class="calculator__tip__btn" type="button">50%</button>
+        <input
+          class="calculator__tip__input"
+          type="number"
+          placeholder="Custom"
+        />
+      </div>
+    </div>
+    <div>
+      <h2 class="calculator__heading">Number of People</h2>
+      <input
+        class="calculator__input calculator__input--people"
+        type="number"
+        placeholder="0"
       />
     </div>
   </div>
-  <div>
-    <h2 class="calculator__heading">Number of People</h2>
-    <input
-      class="calculator__input calculator__input--people"
-      type="number"
-      placeholder="0"
-    />
-  </div>
   <div class="calculator__result">
-    <div class="calculator__result__tip">
+    <div class="calculator__result__row">
       <div class="calculator__result__text">
-        <p>Tip Amount</p>
-        <p>/ person</p>
+        <p class="calculator__result__text--line">Tip Amount</p>
+        <p class="calculator__result__text--person">/ person</p>
       </div>
-      <p>$0.00</p>
+      <p class="calculator__result__amount">$0.00</p>
     </div>
-    <div class="calculator__result__total">
-      <div>
-        <p>Total</p>
-        <p>/ person</p>
+    <div class="calculator__result__row">
+      <div class="calculator__result__text">
+        <p class="calculator__result__text--line">Total</p>
+        <p class="calculator__result__text--person">/ person</p>
       </div>
-      <p>$0.00</p>
+      <p class="calculator__result__amount">$0.00</p>
     </div>
-    <button type="button">RESET</button>
+    <button class="calculator__result__btn" type="button">RESET</button>
   </div>
 </form>
